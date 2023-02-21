@@ -49,12 +49,12 @@ public class b1049 {
 			min2 = Integer.min(num2,min2);
 		}
 		while (n > 0) {
-			if (min1 < min2 * n) {
-				n -= 6;
-				result += min1;
-			} else {
-				result += min2;
-				n-=1;
+			if (min1 < min2 * n&&min1*(n/6)<min2*n) { //정상 출력되었느나 반례가 있었음 로직문제
+				result += min1;	//12 2
+				n-=6;			//20 4
+			} else {			//15 2    이것에 대한 값이 27로 출력됨 원래 결과 24가 정답 
+				result += min2*n; //조건값이 낱개 곱하기 전체를 입력하면 어쩔수 없이 패키지가격보다 클 가능성이 다분함 하지만 패키지는 6개로 구성되어있어 문제가 발생함
+				break;			// 그래서 조건값에 패키지최솟값*(n/6)<낱개최솟값*n 이 패키지를 사고 낱개를 구매하는것보다 낱개만 구매했을때 더 낮은가격을 찾게끔 만들어서 값을 출력해냄
 			}
 		}
 		System.out.println(result);
