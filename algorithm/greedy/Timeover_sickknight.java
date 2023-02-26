@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/*class Sickknight {  //반례도 존재 할 것 같음
-	int n;
+/*class Sickknight {					//반례도 존재 할 것 같음 
+	int n;								//모든 조건값을 찾다보니 시간이 초과된다.
 	int m;
 	int a = 0;
 	int b = 0;
