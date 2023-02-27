@@ -28,11 +28,11 @@ public class numlist2 {
 			} else {
 				int lo = 0;						//이분검색법
 				int hi = lengthoflst;
-				while (lo < hi) { 			
-					int mid = (lo + hi) / 2;
-					if (list2.get(mid) < key)
+				while (lo < hi) { 				//Low가High보다 작을때 반복
+					int mid = (lo + hi) / 2;	// mid는 중간값을 저장함
+					if (list2.get(mid) < key)	// 중간값이 키보다 크면 왼쪽을 버림
 						lo = mid + 1;
-					else
+					else						//중간값이 키보다 작으면 오른쪽을 버림
 						hi = mid;
 				}								//여기까지
 				list2.set(lo, key);				//마지막에 add가 아닌 set(대치)를 하는 이유는 조건이 만족하지 않는 상태가 될 수 도 있는 경우 10 20 30 15가 주어진다고 가정하면
