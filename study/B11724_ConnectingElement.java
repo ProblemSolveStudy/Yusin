@@ -3,23 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-class Node{
-    private int x;
-    private int y;
-    Node(int x , int y){
-        this.x=x;
-        this.y=y;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-}
-
 class ConnectingElement
 {
     private int n,m,result=0;
